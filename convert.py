@@ -22,6 +22,8 @@ def main():
     for thefile in conf_files:
         if os.path.basename(thefile) == 'bogus-nxdomain.china.conf':
             continue
+        if os.path.basename(thefile) == 'apple.china.conf':
+            continue
         txt_file = os.path.join(converted_directory, os.path.basename(thefile) + ".txt")  # 生成的 txt 文件路径
         convert_conf_to_txt(thefile, txt_file, cn_dns)
 
